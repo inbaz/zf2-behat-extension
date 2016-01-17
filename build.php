@@ -11,7 +11,7 @@
 
 chdir(__DIR__);
 
-$filename = 'symfony2_extension.phar';
+$filename = 'zf2_extension.phar';
 
 if (file_exists($filename)) {
     unlink($filename);

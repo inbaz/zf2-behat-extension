@@ -1,7 +1,7 @@
 {
     "name": "behat/symfony2-extension",
     "type": "behat-extension",
-    "description": "Symfony2 framework extension for Behat",
+    "description": "ZF2 framework extension for Behat",
     "keywords": ["symfony", "framework", "bdd"],
     "homepage": "http://behat.org",
     "license": "MIT",
@@ -31,7 +31,7 @@
     },
 
     "autoload": {
-        "psr-0": { "Behat\\Symfony2Extension": "src/" }
+        "psr-0": { "Behat\\ZF2Extension": "src/" }
     },
 
     "extra": {

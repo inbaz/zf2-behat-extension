@@ -1,12 +1,12 @@
-Symfony2 Extension
+ZF2 Extension
 ==================
 
-`Symfony2 <http://symfony.com>`_ is a PHP Web Development Framework. This
+`ZF2 <http://symfony.com>`_ is a PHP Web Development Framework. This
 extension provides integration with it.
 
-Symfony2Extension provides:
+ZF2Extension provides:
 
-* Complete integration into Symfony2 bundle structure - you can define an
+* Complete integration into ZF2 bundle structure - you can define an
   isolated bundle suite by bundle name
 * KernelAwareContext, which provides an initialized and booted kernel
   instance for your contexts
@@ -32,7 +32,7 @@ You can then activate the extension in your ``behat.yml``:
         default:
             # ...
             extensions:
-                Behat\Symfony2Extension: ~
+                Behat\ZF2Extension: ~
 
 The last (optional) step is to register a suite for your bundle:
 
@@ -57,11 +57,11 @@ After installing the extension, there are 3 usage options available:
 1. Implement Context as usual and inject services to the Context's constructor configuration (see below)
 
 2. If you're using PHP 5.4+, you can simply use the
-   ``Behat\Symfony2Extension\Context\KernelDictionary`` trait inside your
+   ``Behat\ZF2Extension\Context\KernelDictionary`` trait inside your
    ``FeatureContext`` or any of its subcontexts. This trait will provide the
    ``getKernel()`` and ``getContainer()`` methods for you.
 
-3. Implementing ``Behat\Symfony2Extension\Context\KernelAwareContext`` with
+3. Implementing ``Behat\ZF2Extension\Context\KernelAwareContext`` with
    your context or its subcontexts. This will give you more customization options.
    Also, you can use this mechanism on multiple contexts avoiding the need to call
    parent contexts from subcontexts when the only thing you need is a kernel instance.
@@ -92,9 +92,9 @@ start with '@' into services:
                         simpleArg: 'string'
                         session:   '@session'
             extensions:
-                Behat\Symfony2Extension: ~
+                Behat\ZF2Extension: ~
 
-The FeatureContext will then be initialized with the Symfony2 session from the container:
+The FeatureContext will then be initialized with the ZF2 session from the container:
 
 .. code-block:: php
 
@@ -109,7 +109,7 @@ The FeatureContext will then be initialized with the Symfony2 session from the c
     {
         public function __construct(Session $session, $simpleArg)
         {
-            // $session is your Symfony2 @session
+            // $session is your ZF2 @session
         }
     }
 
@@ -132,7 +132,7 @@ argument of the :code:`FeatureContext` context.
                   simpleArg: '%%kernel.environment%%'
                   session:   '@session'
       extensions:
-        Behat\Symfony2Extension: ~
+        Behat\ZF2Extension: ~
 
 
 Initialize Bundle Suite
@@ -170,7 +170,7 @@ This can also be used to run specific features in the bundle:
 ``symfony2`` Mink Session
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Symfony2Extension comes bundled with a custom ``symfony2`` session (driver) for Mink,
+ZF2Extension comes bundled with a custom ``symfony2`` session (driver) for Mink,
 which is enabled by default when the MinkExtension and the MinkBrowserKitDriver are
 available. In order to use it you should download/install/activate MinkExtension and
 BrowserKit driver for Mink:
@@ -186,7 +186,7 @@ The new Mink driver will be available for usage:
     default:
         # ...
         extensions:
-            Behat\Symfony2Extension: ~
+            Behat\ZF2Extension: ~
             Behat\MinkExtension:
                 sessions:
                     my_session:
@@ -196,13 +196,13 @@ The new Mink driver will be available for usage:
 
     The KernelDriver requires using a Symfony environment where the test mode of the
     FrameworkBundle is enabled. It uses the ``test`` environment by default, for which it
-    is the case in the Symfony2 Standard Edition.
+    is the case in the ZF2 Standard Edition.
 
 Configuration
 -------------
 
-Symfony2Extension comes with a flexible configuration system, that gives you the ability to
-configure Symfony2 kernel inside Behat to fulfil all your needs.
+ZF2Extension comes with a flexible configuration system, that gives you the ability to
+configure ZF2 kernel inside Behat to fulfil all your needs.
 
 * ``kernel`` - specifies options to instantiate the kernel:
 

@@ -10,10 +10,10 @@
  */
 
 spl_autoload_register(function($class) {
-    if (false !== strpos($class, 'Behat\\Symfony2Extension')) {
+    if (false !== strpos($class, 'Behat\\ZF2Extension')) {
         require_once(__DIR__.'/src/'.str_replace('\\', '/', $class).'.php');
         return true;
     }
 }, true, false);
 
-return new Behat\Symfony2Extension\ServiceContainer\Symfony2Extension;
+return new Behat\ZF2Extension\ServiceContainer\ZF2Extension;

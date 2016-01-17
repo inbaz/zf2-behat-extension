@@ -3,18 +3,18 @@ Migrating from Behat 2.3 to 2.4
 
 Behat 2.4 brings a lot of extensibility for a price of small backward
 compatibility breaks. This guide describes several issues you might
-face when updating a Symfony2 project to the latest version of Behat.
+face when updating a ZF2 project to the latest version of Behat.
 
 There's no BehatBundle nor MinkBundle anymore
 ---------------------------------------------
 
-Before Behat 2.4 an integration with the Symfony2 framework was done with
+Before Behat 2.4 an integration with the ZF2 framework was done with
 bundles. Replacing bundles with extensions is the most important change
 for Symfony users introduced in Behat 2.4.
 
 Since Behat got its own extension system there's simply no need for bundles
 anymore. So instead of the ``BehatBundle`` you'll need to install the
-`Symfony2Extension <http://extensions.behat.org/symfony2/>`_.
+`ZF2Extension <http://extensions.behat.org/symfony2/>`_.
 ``MinkBundle`` was replaced by the `MinkExtension <http://extensions.behat.org/mink/>`_
 and several drivers (like `MinkSeleniumDriver <https://github.com/Behat/MinkSeleniumDriver>`_,
 `MinkBrowserkitDriver <https://github.com/Behat/MinkBrowserkitDriver>`_).
@@ -53,7 +53,7 @@ Instead of configuring Behat in Symfony you'll need to create a new
       formatter:
         name: progress
       extensions:
-        Behat\Symfony2Extension\Extension:
+        Behat\ZF2Extension\Extension:
           mink_driver: true
           kernel:
             env: test
@@ -123,7 +123,7 @@ the ``KernelAwareInterface``:
     namespace Acme\Bundle\AcmeBundle\Features\Context;
 
     use Behat\Behat\Context\BehatContext;
-    use Behat\Symfony2Extension\Context\KernelAwareInterface;
+    use Behat\ZF2Extension\Context\KernelAwareInterface;
     use Symfony\Component\HttpKernel\KernelInterface;
 
     class AcmeContext extends BehatContext implements KernelAwareInterface

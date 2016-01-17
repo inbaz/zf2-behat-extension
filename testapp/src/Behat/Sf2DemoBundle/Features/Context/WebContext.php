@@ -3,7 +3,7 @@
 namespace Behat\Sf2DemoBundle\Features\Context;
 
 use Behat\MinkExtension\Context\MinkContext;
-use Behat\Symfony2Extension\Context\KernelAwareContext;
+use Behat\ZF2Extension\Context\KernelAwareContext;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -17,7 +17,7 @@ class WebContext extends MinkContext implements KernelAwareContext
 
     /**
      * Sets HttpKernel instance.
-     * This method will be automatically called by Symfony2Extension ContextInitializer.
+     * This method will be automatically called by ZF2Extension ContextInitializer.
      *
      * @param KernelInterface $kernel
      */

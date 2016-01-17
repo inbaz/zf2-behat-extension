@@ -2,7 +2,7 @@
 Feature: Web definitions
   In order to describe/test web part of the feature suite
   As features tester
-  I need to be able to use Mink definitions and Symfony2 test driver
+  I need to be able to use Mink definitions and ZF2 test driver
 
   Scenario: Accessing default test controller
     When I go to "/"

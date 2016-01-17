@@ -1,3 +1,11 @@
+# zf2-behat-extension
+zf2-behat-extension should be an integration layer between Behat 3.0+ and Zend Framework 2 and it provides:
+
+* Integration into ZF2 structure - you can run an isolated suite by 
+  shortname, classname or even full path
+* `ServiceLocatorAwareContext`, which provides an initialized zf2 instance for your contexts
+* Additional `zf2` driver for Mink (if `MinkExtension` is installed)
+
 # Symfony2Extension
 [![Build Status](https://travis-ci.org/Behat/Symfony2Extension.svg?branch=master)](https://travis-ci.org/Behat/Symfony2Extension)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Behat/Symfony2Extension/badges/quality-score.png?s=b49d2ecf9c3e9de8cc33df444d248154ac11db44)](https://scrutinizer-ci.com/g/Behat/Symfony2Extension/)
